@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #433878;
+  --secondary-color: #7e60bf;
+  background-color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+}
+.project-card {
+  width: 23rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.project-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+.more {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.tags {
+  display: none;
+  border: 1px solid black;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 1rem;
+  /* padding: 1rem; */
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 0.27rem;
+  left: 0.4rem;
+  bottom: 0.3rem;
+  background-color: white;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  background-color: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  transform: translateX(1.5rem);
+}
+.slider.round:before {
+  border-radius: 50%;
+}
